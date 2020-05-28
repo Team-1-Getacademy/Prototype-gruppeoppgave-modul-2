@@ -1,5 +1,9 @@
-let score = {
-                userID: "",
-                testName: "",
-                score: 32,
-};
+let scoreObject = 
+[
+    {   
+        userId: "", 
+        objScore: "",
+        testId: "",     
+    }
+];
+
