@@ -83,3 +83,6 @@ function newPerson()    {
         input2 = person.testId
         score = person.objectScore
 }
+
+
+document.getElementById("userName").innerHTML.value;
