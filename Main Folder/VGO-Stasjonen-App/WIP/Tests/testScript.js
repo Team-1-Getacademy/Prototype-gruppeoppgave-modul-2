@@ -22,7 +22,7 @@ let btnValue4  = document.getElementById("a1-4").value;
 
 function checkTest() {
 
-document.getElementById("q1").innerHTML = randomFinalQuote + showEndBtns;
+    document.getElementById("q1").innerHTML = randomFinalQuote + showEndBtns;
 
 
 }
@@ -30,13 +30,12 @@ document.getElementById("q1").innerHTML = randomFinalQuote + showEndBtns;
 function show()     {
 
 let questionHtml = testQuestions[counter];
-
 contentDiv.innerHTML = `${questionHtml}`
 
-if (counter == testQuestions.length)    {
-checkTest();
-}
-else showBtns();
+    if (counter == testQuestions.length)    {
+        checkTest();
+        }
+    else showBtns();
 
 }
 
@@ -60,12 +59,13 @@ document.getElementById("a1").innerHTML = btnsShow;
 
 function nextQuestion(btn)  {
 
-score += parseInt(btn.value); 
-counter++;
-show();
-console.log(score);
+    score += parseInt(btn.value); 
+    counter++;
 
-sendScoreToObject();
+        show();
+
+    console.log(score);
+    sendScoreToObject();
 }
 
 function sendScoreToObject()  {

@@ -9,6 +9,10 @@ let scoreObject =
 
 //---------------------Table script-------
 
+let table = document.querySelector("table");
+let data = Object.keys(scoreObject[0]);
+generateTable(table, scoreObject);
+generateTableHead(table, data);
 
 function generateTableHead(table, data) {
     let thead = table.createTHead();
@@ -32,7 +36,4 @@ function generateTableHead(table, data) {
     }
   }
   
-  let table = document.querySelector("table");
-  let data = Object.keys(scoreObject[0]);
-  generateTable(table, scoreObject);
-  generateTableHead(table, data);
+
