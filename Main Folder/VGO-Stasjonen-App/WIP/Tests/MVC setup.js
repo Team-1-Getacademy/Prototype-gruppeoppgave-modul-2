@@ -45,14 +45,20 @@ let testQuestion = [
     {   category: "karrierveiledningOgUtdanningsvalg",
         spm: ['Tenke du på å ta noe utdanning i det nærmeste fremtid?', 'Kan du tenke deg en jobb i det nærmeste fremtiden?'],
     },
-
+    
     ]
 
 
 function randomQuestion() {
-    let randomizer = testQuestion.spm[Math.floor(Math.random()*testQuestion.spm)]
-    testQuestion.forEach(randomizer => console.log(randomizer));
+    testQuestion.forEach(category => console.log(category));
 
+    testQuestion[Math.floor(Math.random()*testQuestion.length)]
+    
+    var result = student.map(function(e) {
+        return e.class[0].code;
+      });
+      
+      console.log(result)
 
 }
 
