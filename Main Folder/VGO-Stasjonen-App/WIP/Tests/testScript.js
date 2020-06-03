@@ -85,4 +85,4 @@ function newPerson()    {
 }
 
 
-document.getElementById("userName").innerHTML.value;
+//document.getElementById("userName").innerHTML.value;
