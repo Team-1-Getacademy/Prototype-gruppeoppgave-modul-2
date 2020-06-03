@@ -50,17 +50,26 @@ let testQuestion = [
 
 
 function randomQuestion() {
-    testQuestion.forEach(category => console.log(category));
+    let random = Math.floor(Math.random()*testQuestion.length);
+    let randomQ = Math.floor(Math.random()*testQuestion[random].spm.length);
+    let spm = testQuestion[random].spm[randomQ];
+    console.log(spm);
+    //testQuestion.forEach(category => console.log(category));
 
-    testQuestion[Math.floor(Math.random()*testQuestion.length)]
-    
-    var result = student.map(function(e) {
-        return e.class[0].code;
-      });
-      
-      console.log(result)
+    // testQuestion.forEach(spm => console.log(spm));
+
 
 }
+
+//     testQuestion[Math.floor(Math.random()*testQuestion.length)]
+    
+//     var result = student.map(function(e) {
+//         return e.class[0].code;
+//       });
+      
+//       console.log(result)
+
+// }
 
     //View
 
