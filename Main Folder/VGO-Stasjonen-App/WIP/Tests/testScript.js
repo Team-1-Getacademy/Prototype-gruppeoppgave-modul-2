@@ -42,16 +42,22 @@ contentDiv.innerHTML = `${questionHtml}`
 function showBtns() {
 
 let btnsShow = 
-`<button onclick="nextQuestion(this)" class="buttonAnswer" id="a1-1" value="8">&#128512;</button>
+`
+<button onclick="nextQuestion(this)" class="buttonAnswer" id="a1-1" value="5">
+&#128512;</button>
 
-<button onclick="nextQuestion(this)" class="buttonAnswer" id="a1-2" value="6">
+<button onclick="nextQuestion(this)" class="buttonAnswer" id="a1-2" value="4">
 &#128578;</button>
 
-<button onclick="nextQuestion(this)" class="buttonAnswer" id="a1-3" value="4">
+<button onclick="nextQuestion(this)" class="buttonAnswer" id="a1-3" value="3">
 &#128528;</button>
 
 <button onclick="nextQuestion(this)" class="buttonAnswer" id="a1-4" value="2">
-&#128577;</button>`;
+&#128577;</button>
+
+<button onclick="nextQuestion(this)" class="buttonAnswer" id="a1-5" value="1">
+&#128577;</button>
+`;
 
 document.getElementById("a1").innerHTML = btnsShow;
 

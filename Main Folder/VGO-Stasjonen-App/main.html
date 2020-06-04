@@ -5,26 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="js/script.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <script src="js/mainPageView.js"></script>
+    <script src="js/mainPageHeaderView.js"></script>
+    <script src="js/mainPageContentView.js"></script>
     <script src="js/terjesTestPageView.js"></script>
     <script src="js/objectDatabase.js"></script>
+    <script src="js/omOss.js"></script>
+    <script src="js/tests.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/profile.js"></script>
 </head>
 
 <body>
-
-    <div id="app"></div>
+    <div id="header"></div>
+    <div id="innhold"></div>
+    <div id="footer"></div>
 
     <script>
-        var app = document.getElementById('app');
+        var headerDiv = document.getElementById('header');
+        var innholdDiv = document.getElementById('innhold');
+        var footerDiv = document.getElementById('footer');
         show();
+        showMainPageHeader();
 
         function show() {
-            if (model.page === 'main') showMainPage();
-            else if (model.page === 'terje') showTerjesTestPage();
-            //if (model.page === 'main') showMainPage();
-            //if (model.page === 'main') showMainPage();
+            if ( model.page === 'main') showMainPageContentView();
+            else if ( model.page === 'omOss')  showPageAboutUsView();
+            else if ( model.page === 'test')  showPageTestView();
+            else if ( model.page === 'profil')  showPageProfilView();
+            else if ( model.page === 'chat')  showPageChatView();
             else showMainPage();
         }
     </script>
