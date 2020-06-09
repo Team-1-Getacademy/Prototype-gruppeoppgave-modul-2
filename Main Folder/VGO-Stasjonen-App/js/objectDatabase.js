@@ -5,30 +5,34 @@ const model = {
         userId: "1035",
     },
 
-    testUserScore: [
-        //Deler på antall spørsmål for å få en snitt score
-        { CategoryId: 1, score: "3", userID: "1035", date: "2020.05.25", },
-        { CategoryId: 2, score: "2", userID: "1035", date: "2020.03.04", },
-        { CategoryId: 5, score: "4", userID: "1035", date: "2020.04.15" },
-    ],
-
     VGOCategories: [
-        { CategoryId: 0, text: 'Søvn' },
-        { CategoryId: 1, text: 'Kosthold' },
-        { CategoryId: 2, text: 'Fysiske Aktivitet' },
-        { CategoryId: 3, text: 'Sosial Aktivitet' },
-        { CategoryId: 4, text: 'Økonomi' },
-        { CategoryId: 5, text: 'Karrierveiledning og Utdanningsvalg' },
+        { CategoryId: 1, text: 'Søvn' },
+        { CategoryId: 2, text: 'Kosthold' },
+        { CategoryId: 3, text: 'Fysiske Aktivitet' },
+        { CategoryId: 4, text: 'Sosial Aktivitet' },
+        { CategoryId: 5, text: 'Økonomi' },
+        { CategoryId: 6, text: 'Karrierveiledning og Utdanningsvalg' },
     ],
 
     testQuestion: [
-        ['sov du godt på natten?', 'Drømme du om fine ting?'], // index = 1, dvs. categoryid = 1
-        ['sov du godt på natten?', 'Drømme du om fine ting?'],
-        ['Spise du ritkig om dagen', 'Har du spist en kebab idag?'],
-        ['Har du løpte i det siste?', 'Har du gått på tur idag?'],
-        ['Har du vært i kontakt med noen venner i det siste?', 'Slitter du med å ta kontakt med venner?'],
-        ['Følger du at du har god kontroll over din økonomi', 'Kjøpe du ting uten å tenke først?'],
-        ['Tenke du på å ta noe utdanning i det nærmeste fremtid?', 'Kan du tenke deg en jobb i det nærmeste fremtiden?'],
+        {text: 'sov du godt på natten?', categoryId: 1 },
+        {text: 'Drømme du om fine ting?', categoryId: 1},
+        {text: 'Spise du ritkig om dagen', categoryId: 2},
+        {text: 'Har du spist en kebab idag?', categoryId: 2},
+        {text: 'Har du løpte i det siste?', categoryId: 3},
+        {text: 'Har du gått på tur idag?', categoryId: 3},
+        {text: 'Har du vært i kontakt med noen venner i det siste?', categoryId: 4}, 
+        {text: 'Sliter du med å ta kontakt med venner?', categoryId: 4},
+        {text: 'Føler du at du har god kontroll over din økonomi', categoryId: 5}, 
+        {text: 'Kjøpe du ting uten å tenke først?', categoryId: 5},
+        {text: 'Tenke du på å ta noe utdanning i det nærmeste fremtid?', categoryId: 6}, 
+        {text: 'Kan du tenke deg en jobb i det nærmeste fremtiden?', categoryId: 6},
+    ],
+
+    //Deler på antall spørsmål for å få en snitt score
+    answers: [         
+        // { userId: "1035", date: "2020-06-05", answers: [] },
+
     ],
 
     weekPlan: [
@@ -39,16 +43,13 @@ const model = {
     ],
 
     tipsTricks: [
-        { categoryId: 1, tips1: 'Telle sauer', 'Pusteøvelser: sampleurl' },
+        { categoryId: 1, tips: ['Telle sauer', 'Pusteøvelser: sampleurl']},
+        { categoryId: 2, tips: ['Spis én av fem om dagen',  'Spis regelmessig fremfor i store mengder få ganger daglig' ]},
+        { categoryId: 3, tips: ['Det er lettere å fortsette enn å komme i gang',  '7 enkle grep for å komme i form: samlpleurl']} ,
+        { categoryId: 4, tips: ['Ikke avstå fra sosiale situasjoner',  'MS paint er fint for moro' ]},
+        { categoryId: 5, tips: ['Eksempelmatbudsjett',  '656 tips til lettere sparing' ]},
+        { categoryId: 6, tips: ['Interessetest: sampleurl', 'hvilke form for antarktismurmeldyr med kompetanse er du?' ]},
+        ]
 
-        { categoryId: 2, tips1: 'Spis én av fem om dagen', tips2: 'Spis regelmessig fremfor i store mengder få ganger daglig' },
-
-        { categoryId: 3, tips1: 'Det er lettere å fortsette enn å komme i gang', tips2: '7 enkle grep for å komme i form: samlpleurl' },
-
-        { categoryId: 4, tips1: 'Ikke avstå fra sosiale situasjoner', tips2: 'MS paint er fint for moro' },
-
-        { categoryId: 5, tips1: 'Eksempelmatbudsjett', tips2: '656 tips til lettere sparing' },
-
-        { categoryId: 6, tips1: 'Interessetest: sampleurl', tips2: 'hvilke form for antarktismurmeldyr med kompetanse er du?' },
-    ]
+    
 }
