@@ -31,7 +31,10 @@ const model = {
 
     //Deler på antall spørsmål for å få en snitt score
     answers: [         
-        // { userId: "1035", date: "2020-06-05", answers: [] },
+        // { categoryId: id, userId: user ,date: today ,answers: [] },
+        {testId: 1, userId: "1035", date: "2020-06-10", answers: Array(12)},
+        {testId: 1, userId: "1035", date: "2020-03-09", answers: Array(12)},
+        {testId: 1, userId: "1035", date: "2020-03-10", answers: Array(12)},
 
     ],
 
