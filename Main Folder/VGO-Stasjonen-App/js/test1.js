@@ -10,7 +10,7 @@ function showPageTest1View() {
     let i = model.answers.length; i--;
     const currentQuestionIndex = model.answers[i].answers.length;
     const text = currentQuestionIndex >= model.testQuestion.length
-    ? 'du er ferdig <button>gå til side b</button>'
+    ? scoreboardPoints(5) + 'du er ferdig <button>gå til side b</button>'
     : ` ${model.testQuestion[currentQuestionIndex].text} <br> ${nrButtons}`
     innhold.innerHTML = `
     <div>
@@ -24,4 +24,9 @@ function registerAnswer(answer) {
     
     model.answers[i].answers.push(answer);
     showPageTest1View();
+}
+
+function scoreboardPoints(value){
+   let scoreInnhold = document.getElementById("innhold").innerHTML;
+    return `${value}`
 }

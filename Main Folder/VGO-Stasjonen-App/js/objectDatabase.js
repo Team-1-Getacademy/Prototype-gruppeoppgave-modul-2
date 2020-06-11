@@ -42,10 +42,11 @@ const model = {
     ],
 
     weekPlan: [
-        { plan: 'Re sengen', score: 13, categoryId: 1 },
-        { plan: 'Legge deg 23.00', score: 15, categoryId: 1 },
-        { plan: 'Våkne en bestemt tid hver dag', score: 23, categoryId: 1 },
-        { plan: 'Våkne 08.00', score: 30, categoryId: 1 },
+        { plan: 'Re sengen', score: 1, categoryId: 1 },
+        { plan: 'Legge deg 23.00', score: 2, categoryId: 1 },
+        { plan: 'Våkne en bestemt tid hver dag', score: 3, categoryId: 1 },
+        { plan: 'Våkne 08.00', score: 4, categoryId: 1 },
+        { plan: 'Våkne 07.30', score: 5, categoryId: 1 },
     ],
 
     tipsTricks: [
