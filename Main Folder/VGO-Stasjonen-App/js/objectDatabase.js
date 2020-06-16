@@ -32,21 +32,26 @@ const model = {
     //Deler på antall spørsmål for å få en snitt score
     answers: [         
         // { categoryId: id, userId: user ,date: today ,answers: [] },
-        { categoryId: 1, userId: "1035", date: new Date('2020-06-10'), answers: Array(12)},
-        {categoryId: 1, userId: "1035", date: new Date('2020-03-09'), answers: Array(12)},
-        {categoryId: 1, userId: "1035", date: new Date('2020-03-10'), answers: Array(12)},
-        {categoryId: 2, userId: "1035", date: "2020-06-10", answers: Array(12)},
-        {categoryId: 2, userId: "1035", date: "2020-03-09", answers: Array(12)},
-        {categoryId: 2, userId: "1035", date: "2020-03-10", answers: Array(12)},
+        {categoryId: 1, userId: "1035", date: new Date('06.10.2020'), answers: [3,5,4,5,5,5,5,2,4,3,5,]},
+        {categoryId: 1, userId: "1035", date: new Date('03.09.2020'), answers: Array(12)},
+        {categoryId: 1, userId: "1035", date: new Date('03.10.2020'), answers: Array(12)},
+        {categoryId: 2, userId: "1035", date: new Date('2020.06.10'), answers: Array(12)},
+        {categoryId: 2, userId: "1035", date: new Date('2020.03.09'), answers: Array(12)},
+        {categoryId: 2, userId: "1035", date: new Date('2020.03.10'), answers: Array(12)},
 
     ],
 
     weekPlan: [
         { plan: 'Re sengen', score: 1, categoryId: 1 },
         { plan: 'Legge deg 23.00', score: 2, categoryId: 1 },
-        { plan: 'Våkne en bestemt tid hver dag', score: 3, categoryId: 1 },
+        { plan: 'Våkne en bestemt tid hver dag', score: 2.4, categoryId: 1 },
         { plan: 'Våkne 08.00', score: 4, categoryId: 1 },
         { plan: 'Våkne 07.30', score: 5, categoryId: 1 },
+        { plan: 'Re sengen', score: 1, categoryId: 2 },
+        { plan: 'Legge deg 23.00', score: 2, categoryId: 2 },
+        { plan: 'Våkne en bestemt tid hver dag', score: 2.4, categoryId: 2 },
+        { plan: 'Våkne 08.00', score: 4, categoryId: 2 },
+        { plan: 'Våkne 07.30', score: 5, categoryId: 2 },
     ],
 
     tipsTricks: [

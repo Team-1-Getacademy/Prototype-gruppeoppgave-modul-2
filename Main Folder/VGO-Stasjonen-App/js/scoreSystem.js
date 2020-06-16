@@ -8,7 +8,7 @@ newArray = newArray2.filter(function(filterTest){
         return filterTest;
 })
     var total = 0;
-    let answers = newArray[3].answers
+    let answers = newArray[0].answers
     for(var i = 0; i < answers.length; i++) {
         total += answers[i];
     }
