@@ -3,6 +3,8 @@ const model = {
     user: {
         name: 'Geir Eskil Terjesen',
         userId: "1035",
+        totalLvl: 0,
+        xpToNextLvl: 30,
     },
 
     VGOCategories: [
@@ -55,12 +57,12 @@ const model = {
     ],
 
     tipsTricks: [
-        { categoryId: 1, tips: ['Telle sauer', 'Pusteøvelser: sampleurl']},
-        { categoryId: 2, tips: ['Spis én av fem om dagen',  'Spis regelmessig fremfor i store mengder få ganger daglig' ]},
-        { categoryId: 3, tips: ['Det er lettere å fortsette enn å komme i gang',  '7 enkle grep for å komme i form: samlpleurl']} ,
-        { categoryId: 4, tips: ['Ikke avstå fra sosiale situasjoner',  'MS paint er fint for moro' ]},
-        { categoryId: 5, tips: ['Eksempelmatbudsjett',  '656 tips til lettere sparing' ]},
-        { categoryId: 6, tips: ['Interessetest: sampleurl', 'hvilke form for antarktismurmeldyr med kompetanse er du?' ]},
+        { categoryId: 1, kategori: 'Søvn', tips: ['Telle sauer', 'Pusteøvelser: sampleurl']},
+        { categoryId: 2, kategori: 'Kosthold', tips: ['Spis én av fem om dagen',  'Spis regelmessig fremfor i store mengder få ganger daglig' ]},
+        { categoryId: 3, kategori: 'Fysisk aktivitet', tips: ['Det er lettere å fortsette enn å komme i gang',  '7 enkle grep for å komme i form: samlpleurl']} ,
+        { categoryId: 4, kategori: 'Sosial Aktivitet', tips: ['Ikke avstå fra sosiale situasjoner',  'MS paint er fint for moro' ]},
+        { categoryId: 5, kategori: 'Økonomi', tips: ['Eksempelmatbudsjett',  '656 tips til lettere sparing' ]},
+        { categoryId: 6, kategori: 'Karrierveiledning og Utdanningsvalg', tips: ['Interessetest: sampleurl', 'hvilke form for antarktismurmeldyr med kompetanse er du?' ]},
         ]
 
     

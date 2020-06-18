@@ -1,25 +1,13 @@
 
-// Controller
+
 let todaysDate = new Date();
 
-let isDone = false;
-// function addobjectWeekplan() {
-//     objectWeekplans.push({
-//         category: categoryId,
-//         description: plan,
-//         isDone: false,
-//         dateDone: undefined
-//     });
-    
-//     show();
-// }
 
-// View
-// weekPlanHTML = document.getElementById('planBox');
 let weekPlan = [];
+let planHtml;
 
 weekplanSorted();
-show();
+showWeekPlan();
 
 function weekplanSorted(){
     for (let i = 1; i < 7; i++) {
@@ -28,7 +16,7 @@ function weekplanSorted(){
     }
 }
 
-function show() {
+function showWeekPlan() {
      planHtml = `<table>
                     <tr>
                         <th>Kategori</th>
@@ -45,7 +33,6 @@ function show() {
     }
     planHtml += `</table>`;
     weekPlanHTML = planHtml;    
-  
 }
 
 
@@ -60,17 +47,6 @@ function createHtmlRow(j, i) {
                         </td>
                     </tr>
                     `;
-    // return `<tr>
-    //                     <td><input id="editPerson${i}" type="text" value="${objectWeekplan.person}"/></td>
-    //                     <td><input id="editDescription${i}" type="text" value="${objectWeekplan.description}"/></td>
-    //                     <td><input onchange="changeIsDone(this, ${i})" type="checkbox" ${checkedHtml} /></td>
-    //                     <td>${objectWeekplan.dateDone}</td>
-    //                     <td><input type="date" onchange="changeDate(this, ${i})"/><td>
-    //                     <td>
-    //                         <button onclick="updateobjectWeekplan(${i})">Lagre</button>
-    //                     </td>
-    //                 </tr>
-    //                 `;
 }
 
 
@@ -78,35 +54,15 @@ function createHtmlRow(j, i) {
 function changeIsDone(checkbox, j,index) {
     weekPlan[j][index].isDone = checkbox.checked;
     if (weekPlan[j][index].isDone)  {
-                weekPlan[j][index].dateDone = todaysDate.toLocaleDateString();
+            weekPlan[j][index].dateDone = todaysDate.toLocaleDateString();
     }
     else {weekPlan[j][index].dateDone = 'Ikke gjort'}
-    //show();
+    showWeekPlan();
+    show();
 }
 function changeDate(newDate, j,index){
     weekPlan[j][index].deadline = newDate.value;
-    show()
+    showWeekPlan();
+    show();
 }
-
-// function deleteobjectWeekplan(index) {
-//     objectWeekplans.splice(index, 1);
-//     show();
-// }
-
-// function editobjectWeekplan(index) {
-//     objectWeekplans[index].editMode = true;
-//     show();
-// }
-
-// function updateobjectWeekplan(index) {
-//     const id = `editDescription${index}`;
-//     const idPerson = `editPerson${index}`;
-//     const inputTag = document.getElementById(id);
-//     const inputTagPerson = document.getElementById(idPerson);
-//     const objectWeekplan = objectWeekplans[index];
-//     objectWeekplan.description = inputTag.value;
-//     objectWeekplan.person = inputTagPerson.value;
-//     objectWeekplan.editMode = false;
-//     show();
-// }
 

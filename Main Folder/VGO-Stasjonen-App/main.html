@@ -12,6 +12,7 @@
     <script src="js/scoreSystem.js"></script>
     <script src="js/weekplanSort.js"></script>
     <script src="js/weekplan.js"></script>
+    <script src="js/infobox.js"></script>
     <script src="js/tests.js"></script>
     <script src="js/test1.js"></script>
     <!-- <script src="js/terjesTestPageView.js"></script> -->
@@ -26,14 +27,18 @@
     <div id="footer"></div>
 
     <script>
+        
         var headerDiv = document.getElementById('header');
         var innholdDiv = document.getElementById('innhold');
         var footerDiv = document.getElementById('footer');
         show();
+        
         showMainPageHeader();
+        showWeekPlan();
 
         function show() {
-            if ( model.page === 'main') showMainPageContentView();
+            if (model.page === 'login') loginView();
+            else if ( model.page === 'main') showMainPageContentView();
             else if ( model.page === 'omOss')  showPageAboutUsView();
             else if ( model.page === 'test')  showPageTestView();
             else if ( model.page === 'test1')  showPageTest1View();
