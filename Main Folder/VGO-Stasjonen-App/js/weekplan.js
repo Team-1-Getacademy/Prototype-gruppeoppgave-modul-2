@@ -2,6 +2,7 @@
 // Controller
 let todaysDate = new Date();
 
+let isDone = false;
 // function addobjectWeekplan() {
 //     objectWeekplans.push({
 //         category: categoryId,
@@ -16,18 +17,19 @@ let todaysDate = new Date();
 // View
 // weekPlanHTML = document.getElementById('planBox');
 let weekPlan = [];
-let planHtml = `
-<tr>
-    <th>Kategori></th>
-    <th>Oppgave</th>
-    <th>Gjort</th>
-    <th>Dato ferdig</th>
-    <th>Sett frist</th>
-</tr>`;
+
+weekplanSorted();
 show();
 
+function weekplanSorted(){
+    for (let i = 1; i < 7; i++) {
+        sortWeekplan(i); 
+        weekPlan.push(weekplanFinal);
+    }
+}
+
 function show() {
-    let planHtml = `<table>
+     planHtml = `<table>
                     <tr>
                         <th>Kategori</th>
                         <th>Oppgave</th>
@@ -35,23 +37,26 @@ function show() {
                         <th>Dato ferdig</th>
                         <th>Sett frist</th>
                     </tr>`;
-    for (let i = 0; i < weekPlan.length; i++) {
-        planHtml += createHtmlRow(i);
-    }planHtml += `</table>`
+
+    for (let j = 0; j < weekPlan.length; j++) {
+        for (let i = 0; i < weekPlan[j].length; i++) {
+            planHtml += createHtmlRow(j, i);
+       }
+    }
+    planHtml += `</table>`;
     weekPlanHTML = planHtml;    
   
 }
 
-function createHtmlRow(i) {
-    const objectWeekplan = weekPlan[i];
+
+function createHtmlRow(j, i) {
+    const objectWeekplan = weekPlan[j][i];
     const checkedHtml = objectWeekplan.isDone ? 'checked="checked"' : '';
-    if (!objectWeekplan.editMode)
-        return `<tr>
-                        <td>${objectWeekplan.categoryId}</td>
+        return `<tr>    <td>${objectWeekplan.kategori}</td>
                         <td>${objectWeekplan.plan}</td>
-                        <td><input onchange="changeIsDone(this, ${i})" type="checkbox" ${checkedHtml} /></td>
+                        <td><input onchange="changeIsDone(this, ${j} , ${i})" type="checkbox" ${checkedHtml} /></td>
                         <td>${objectWeekplan.dateDone}</td>
-                        <td><input type="date" onchange="changeDate(this, ${i})" value="${objectWeekplan.deadline || ''}"/><td>
+                        <td><input type="date" onchange="changeDate(this, ${j} , ${i})" value="${objectWeekplan.deadline || ''}"/><td>
                         </td>
                     </tr>
                     `;
@@ -68,14 +73,18 @@ function createHtmlRow(i) {
     //                 `;
 }
 
-function changeIsDone(checkbox, index) {
-    objectWeekplans[index].isDone = checkbox.checked;
-    if (objectWeekplans[index].isDone){objectWeekplans[index].dateDone = todaysDate.toLocaleDateString();}
-    else {objectWeekplans[index].dateDone = 'Ikke gjort'}
-    show();
+
+
+function changeIsDone(checkbox, j,index) {
+    weekPlan[j][index].isDone = checkbox.checked;
+    if (weekPlan[j][index].isDone)  {
+                weekPlan[j][index].dateDone = todaysDate.toLocaleDateString();
+    }
+    else {weekPlan[j][index].dateDone = 'Ikke gjort'}
+    //show();
 }
-function changeDate(newDate, index){
-    objectWeekplans[index].deadline = newDate.value;
+function changeDate(newDate, j,index){
+    weekPlan[j][index].deadline = newDate.value;
     show()
 }
 
@@ -100,14 +109,4 @@ function changeDate(newDate, index){
 //     objectWeekplan.editMode = false;
 //     show();
 // }
-
-
-function weekplanSorted(){
-    for (let i = 1; i < 7; i++) {
-        sortWeekplan(i);
-        weekPlan.push(weekplanFinal);
-    }
-    
-    
-}
 
