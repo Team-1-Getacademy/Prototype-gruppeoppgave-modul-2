@@ -5,6 +5,7 @@ const model = {
         userId: "1035",
         totalLvl: 0,
         xpToNextLvl: 30,
+        TimesLogInn: 0,
     },
 
     VGOCategories: [
@@ -17,7 +18,7 @@ const model = {
     ],
 
     testQuestion: [
-        {text: 'sov du godt på natten?', categoryId: 1 },
+        {text: 'sov du godt på natten?', svar: ['Veldig bra', 'Bra', 'Dårlig', 'Veldig Dårlig'], tilbakemelding: ['Ikke noe å endre', 'Fortsette i samme spor','Kjøre noen pusteøvelser','Gå til legen'],categoryId: 1 },
         {text: 'Drømme du om fine ting?', categoryId: 1},
         {text: 'Spise du ritkig om dagen', categoryId: 2},
         {text: 'Har du spist en kebab idag?', categoryId: 2},
