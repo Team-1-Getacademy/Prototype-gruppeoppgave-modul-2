@@ -10,6 +10,7 @@ function showMainPageHeader() {
             <button class="tests" onclick="model.page='test';show();">test deg selv</button>
             <button class="profile" onclick="model.page='profil';show();">profil</button>
             <button class="chat" onclick="model.page='chat';show();">chat</button>
+            <button class="chat" onclick="model.page='Priser';show();">Pris</button>
         </div>
         
         
