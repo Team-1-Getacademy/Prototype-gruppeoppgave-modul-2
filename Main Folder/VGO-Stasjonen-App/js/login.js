@@ -1,6 +1,7 @@
 function loginView(){
+    headerDiv.style.display='none'
     innholdDiv.innerHTML=
- `<div id="formContainer">
+ `<div class="loginbox" id="formContainer">
         <input type="email" placeholder="Email" id="email">
         <input type="password" placeholder="Password" id="password">
 
@@ -9,6 +10,14 @@ function loginView(){
         
         
         </div>`
+    }
+
+    function signIn(){
+        headerDiv.style.display='block';
+        showMainPageHeader();
+        showMainPageContentView();
+        
+
     }
     //<button onclick="signOut()" id="signOut"> Sign Out </button>
     //<button onclick="signUp()" id="signUp"> Sign Up </button>

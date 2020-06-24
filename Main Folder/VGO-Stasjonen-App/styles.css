@@ -63,4 +63,7 @@ body{
     grid-row: span 3;
     padding-left: 0;
 }
-
+.loginbox {
+    text-align: center;
+    padding-top: 200px;
+}

@@ -1,5 +1,5 @@
 const model = {
-    page: 'main',
+    page: 'login',
     user: {
         name: 'Geir Eskil Terjesen',
         userId: "1035",
@@ -64,7 +64,80 @@ const model = {
         { categoryId: 4, kategori: 'Sosial Aktivitet', tips: ['Ikke avstå fra sosiale situasjoner',  'MS paint er fint for moro' ]},
         { categoryId: 5, kategori: 'Økonomi', tips: ['Eksempelmatbudsjett',  '656 tips til lettere sparing' ]},
         { categoryId: 6, kategori: 'Karrierveiledning og Utdanningsvalg', tips: ['Interessetest: sampleurl', 'hvilke form for antarktismurmeldyr med kompetanse er du?' ]},
-        ]
+    ],
+}
 
+const modelTest ={
+   kosthold: {
+    testQuestion: ["Hvor mange måltider spiser du på en dag?","Hvor spiser du?","Spiser du oftest alene eller sammen med andre?","Hvor mange av regnbuens farger har du på tallerkenen din?"],
     
+    testAnswer:[
+        ["Spiser 4-6 måltider om dagen","Spiser 1-10 måltidere om dagen","Spiser når sulten 1-3 måltider","Når det er mat"],
+        ["Spiser ved kjøkkenbord/spisebord","Spiser ved bordet, TV, seng,...","Der du er","Der du er"],
+        ["Spiser alene og sammen med andre","Varierer","Mest alene","Mest alene"],
+        ["Mange farger","Varierer","Noen få","Ingen"],
+    ],
+    userAnswers: [
+        {date: 'Noe',testNr: 'nr', answers:[]},
+        {date: 'Noe',testNr: 'nr', answers:[]},
+        {date: 'Noe',testNr: 'nr', answers:[]},
+    ],
+    testTilbakemelding:[
+        ["Supert, du har gode spisemønstre. Fortsett å variere måltidene.","Dette er bra og et godt utgangspunkt, du må ha fokus på drivstoff i kroppen din og bestemme deg for måltidsrytme","Hmmm, her skal vi brette opp arma. Du trenger oversikt over måltidsrytme","Her må en jobb gjøres med måltidsrytme."],
+        ["Bra! Kroppen og fordøyelsen fortjener fokus på spisesituasjonen","Bestem deg for et sted å spise, kroppen og fordøyelsen fortjener fokus på spisesituasjonen.","Dette er betenkelig, sosial spising er viktig for matglede og fordøyelse.","Her har du stort forbedringspotensialet- se tipsene"],
+        ["Så bra! Å kunne spise sammen med andre er godt sosialt.","Fint med variasjon, å dele et måltid er godt for mennesker. Inviter til et måltid.","Å dele måltider gir gode fellesskap","Å dele måltider gir gode fellesskap"],
+        ["Det er bra! Mat med mange farger er bra for fordøyelsen og helsa generelt.","Du må passe på å spise farger til alle måltidene dine.","Det har potensialet.","Hmmmm, her må noe gjøres."],
+
+    ],
+    weekPlan:[
+        ["weekPlan1","weekPlan2","weekPlan3","weekPlan4",],
+        ["weekPlan1","weekPlan2","weekPlan3","weekPlan4",],
+        ["weekPlan1","weekPlan2","weekPlan3","weekPlan4",],
+        ["weekPlan1","weekPlan2","weekPlan3","weekPlan4",],
+    ],
+    tipsTricks:[
+        ["tips1","tips2","tips3","tips4",],
+        ["tips1","tips2","tips3","tips4",],
+        ["tips1","tips2","tips3","tips4",],
+        ["tips1","tips2","tips3","tips4",],
+    ],
+},
+Søvn: {
+    testQuestion: ["Hvor mange måltider spiser du på en dag?","Hvor spiser du?","Spiser du oftest alene eller sammen med andre?","Hvor mange av regnbuens farger har du på tallerkenen din?"],
+    
+    testAnswer:[
+        ["Spiser 4-6 måltider om dagen","Spiser 1-10 måltidere om dagen","Spiser når sulten 1-3 måltider","Når det er mat"],
+        ["Spiser ved kjøkkenbord/spisebord","Spiser ved bordet, TV, seng,...","Der du er","Der du er"],
+        ["Spiser alene og sammen med andre","Varierer","Mest alene","Mest alene"],
+        ["Mange farger","Varierer","Noen få","Ingen"],
+    ],
+    userAnswers: [
+        {date: 'Noe',testNr: 'nr', answers:[]},
+        {date: 'Noe',testNr: 'nr', answers:[]},
+        {date: 'Noe',testNr: 'nr', answers:[]},
+    ],
+    testTilbakemelding:[
+        ["Supert, du har gode spisemønstre. Fortsett å variere måltidene.","Dette er bra og et godt utgangspunkt, du må ha fokus på drivstoff i kroppen din og bestemme deg for måltidsrytme","Hmmm, her skal vi brette opp arma. Du trenger oversikt over måltidsrytme","Her må en jobb gjøres med måltidsrytme."],
+        ["Bra! Kroppen og fordøyelsen fortjener fokus på spisesituasjonen","Bestem deg for et sted å spise, kroppen og fordøyelsen fortjener fokus på spisesituasjonen.","Dette er betenkelig, sosial spising er viktig for matglede og fordøyelse.","Her har du stort forbedringspotensialet- se tipsene"],
+        ["Så bra! Å kunne spise sammen med andre er godt sosialt.","Fint med variasjon, å dele et måltid er godt for mennesker. Inviter til et måltid.","Å dele måltider gir gode fellesskap","Å dele måltider gir gode fellesskap"],
+        ["Det er bra! Mat med mange farger er bra for fordøyelsen og helsa generelt.","Du må passe på å spise farger til alle måltidene dine.","Det har potensialet.","Hmmmm, her må noe gjøres."],
+
+    ],
+    weekPlan:[
+        ["weekPlan1","weekPlan2","weekPlan3","weekPlan4",],
+        ["weekPlan1","weekPlan2","weekPlan3","weekPlan4",],
+        ["weekPlan1","weekPlan2","weekPlan3","weekPlan4",],
+        ["weekPlan1","weekPlan2","weekPlan3","weekPlan4",],
+    ],
+    tipsTricks:[
+        ["tips1","tips2","tips3","tips4",],
+        ["tips1","tips2","tips3","tips4",],
+        ["tips1","tips2","tips3","tips4",],
+        ["tips1","tips2","tips3","tips4",],
+    ],
+}
+
+// modelTest.kosthold.testQuestion[]
+// modelTest.kosthold.testAnswer[1][2]
+
 }

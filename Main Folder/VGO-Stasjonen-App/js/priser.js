@@ -5,3 +5,4 @@ function showPagePriceView() {
     </div>
     </div>`;
 }
+
