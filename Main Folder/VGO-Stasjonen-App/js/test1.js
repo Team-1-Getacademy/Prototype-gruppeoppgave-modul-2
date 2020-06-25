@@ -26,7 +26,7 @@ function registerAnswer(answer) {
     showPageTest1View();
 }
 
-function scoreboardPoints(value){
-   let scoreInnhold = document.getElementById("innhold").innerHTML;
-    return `${value}`
-}
+// function scoreboardPoints(value){
+//    let scoreInnhold = document.getElementById("innhold").innerHTML;
+//     return `${value}`
+// }

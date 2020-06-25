@@ -1,4 +1,3 @@
-// let nrButtons = `<button onclick="registerAnswer(3)">${answer}</button> <button onclick="registerAnswer(2)">3</button> <button onclick="registerAnswer(1)">2</button> <button onclick="registerAnswer(0)">1</button>`;
 
 function updateAnswers2() {
     const today = new Date();
@@ -6,12 +5,15 @@ function updateAnswers2() {
 }
 
 function showPageTest2View() {
+    let buttonTest ='';
     let i = modelTest.kosthold.userAnswers.length; i--;
-    // for (let j = 0; j < 4; j++);
+    for (let j = 0; j < 4; j++){
+       buttonTest += createButton(j)
+    };
     const currentQuestionIndex = modelTest.kosthold.userAnswers[i].answers.length;
     const text = currentQuestionIndex >= modelTest.kosthold.testQuestion.length
-    ? scoreboardPoints(5) + 'du er ferdig <button>gå til side b</button>'
-    : ` ${modelTest.kosthold.testQuestion[currentQuestionIndex].text} <br> ${createButton()}`
+    ? 'du er ferdig <button>gå til side b</button>'
+    : ` ${modelTest.kosthold.testQuestion[currentQuestionIndex]} <br> ${buttonTest}`
     innhold.innerHTML = `
     <div>
     ${text}
@@ -20,15 +22,22 @@ function showPageTest2View() {
 }
 function createButton(j){
     let answer = modelTest.kosthold.testAnswer[j]
-    return `<button onclick="registerAnswer(${j})">${answer}</button>`
+    return `<button onclick="registerAnswer(${j})">${answer}</button> <br>`
 }
 
 function registerAnswer(answer) {
     let i = modelTest.kosthold.userAnswers.length; i--;
     
-    modelTest.kosthold.answers[i].userAnswers.push(answer);
-    showPageTest1View();
+    modelTest.kosthold.userAnswers[i].answers.push(answer);
+    showPageTest2View();
 }
+
+
+
+
+
+
+
 
 // function scoreboardPoints(value){
 //    let scoreInnhold = document.getElementById("innhold").innerHTML;
