@@ -4,6 +4,7 @@ let todaysDate = new Date();
 
 
 let weekPlan3 = [];
+let weekPlanDone = [];
 let planHtml;
 answerSorted()
 weekplanSorted();
@@ -29,7 +30,13 @@ function dateFilter(i) {
 function weekplanSorted(){
     for (let j = 0; j < weekPlan.length; j++) {
         for (let i = 0; i < weekPlan[j].length; i++) {
-            weekPlan3[j].answers[i];
+            k = weekPlan3[j].answers[i];
+            weekPlanText = modelTest[modelTest.kategori[j]].weekPlan[k]
+            weekPlanDone.push({weekPlanText,
+                isDone: false,
+                deadline: undefined,
+                dateDone: undefined,
+            })
        }
     }
 }
