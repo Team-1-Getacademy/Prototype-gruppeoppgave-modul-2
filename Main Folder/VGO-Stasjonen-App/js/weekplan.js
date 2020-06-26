@@ -4,10 +4,76 @@ let todaysDate = new Date();
 
 
 let weekPlan = [];
-let planHtml;
+// let planHtml;
 
+// weekplanSorted();
+// showWeekPlan();
+
+
+
+let weekPlan3 = [];
+let weekPlanDone = [];
+let planHtml;
+answerSorted()
 weekplanSorted();
+weekplanSorted1();
 showWeekPlan();
+
+
+
+let kategorier;
+function answerSorted(){
+    for (let i = 0; i < 2; i++) {
+        dateFilter(i); 
+        weekPlan3.push(newArray6);
+    }
+}
+
+function dateFilter(i) {
+    let kategorier = modelTest.kategori[i];
+    newArray6 = modelTest[kategorier].userAnswers.sort((a, b) => b.date - a.date)
+    newArray6.splice(1,Infinity)
+    return newArray6;
+}
+
+function weekplanSorted1(){
+    for (let j = 0; j < weekPlan3.length; j++) {
+        for (let i = 0; i < weekPlan3[j][0].answers.length; i++) {
+            k = weekPlan3[j].answers[i];
+            weekPlanText = modelTest[modelTest.kategori[j]].weekPlan[k]
+            weekPlanDone.push({weekPlanText,
+                isDone: false,
+                deadline: undefined,
+                dateDone: undefined,
+            })
+       }
+    }
+}
+
+
+
+// const weekPlan3 = [];
+// weekplanSorted1();
+// let kategorier;
+// function weekplanSorted1(){
+//     for (let i = 0; i < 2; i++) {
+//         dateFilter(i); 
+//         weekPlan3.push(newArray6);
+//     }
+// }
+
+// function dateFilter(i) {
+//     let kategorier = modelTest.kategori[i];
+//     newArray6 = modelTest[kategorier].userAnswers.sort((a, b) => b.date - a.date)
+//     newArray6.splice(1,Infinity)
+//     return newArray6;
+// }
+
+
+
+
+
+
 
 function weekplanSorted(){
     for (let i = 1; i < 7; i++) {

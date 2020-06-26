@@ -3,23 +3,40 @@
 let todaysDate = new Date();
 
 
-let weekPlan = [];
+let weekPlan3 = [];
 let planHtml;
-
+answerSorted()
 weekplanSorted();
 showWeekPlan();
 
-function weekplanSorted(){
-    for (let i = 0; i < 6; i++) {
-        dateFilter(modelTest.kategori[i]); 
-        weekPlan3.push(newArray5);
+
+
+let kategorier;
+function answerSorted(){
+    for (let i = 0; i < 2; i++) {
+        dateFilter(i); 
+        weekPlan3.push(newArray6);
     }
 }
 
-function dateFilter(kategori) {
-    newArray5 = modelTest[kategori].userAnswers.sort((a, b) => b.date - a.date);
-    return newArray5[0];
+function dateFilter(i) {
+    let kategorier = modelTest.kategori[i];
+    newArray6 = modelTest[kategorier].userAnswers.sort((a, b) => b.date - a.date)
+    newArray6.splice(1,Infinity)
+    return newArray6;
 }
+
+function weekplanSorted(){
+    for (let j = 0; j < weekPlan.length; j++) {
+        for (let i = 0; i < weekPlan[j].length; i++) {
+            weekPlan3[j].answers[i];
+       }
+    }
+}
+
+
+
+
 
 function showWeekPlan() {
      planHtml = `<table>
