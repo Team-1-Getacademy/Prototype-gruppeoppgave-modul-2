@@ -68,7 +68,9 @@ const model = {
 }
 
 const modelTest ={
-   kosthold: {
+    kategori: ["kosthold","søvn",],
+
+    kosthold: {
     testQuestion: ["Hvor mange måltider spiser du på en dag?","Hvor spiser du?","Spiser du oftest alene eller sammen med andre?","Hvor mange av regnbuens farger har du på tallerkenen din?"],
     
     testAnswer:[
@@ -78,9 +80,9 @@ const modelTest ={
         ["Mange farger","Varierer","Noen få","Ingen"],
     ],
     userAnswers: [
-        {date: 'Noe',testNr: 'nr', answers:[]},
-        {date: 'Noe',testNr: 'nr', answers:[]},
-        {date: 'Noe',testNr: 'nr', answers:[]},
+        {date: new Date('01.10.2020'),testNr: 'nr', answers:[2,3,1,0,]},
+        {date: new Date('02.10.2020'),testNr: 'nr', answers:[]},
+        {date: new Date('04.10.2020'),testNr: 'nr', answers:[]},
     ],
     testTilbakemelding:[
         ["Supert, du har gode spisemønstre. Fortsett å variere måltidene.","Dette er bra og et godt utgangspunkt, du må ha fokus på drivstoff i kroppen din og bestemme deg for måltidsrytme","Hmmm, her skal vi brette opp arma. Du trenger oversikt over måltidsrytme","Her må en jobb gjøres med måltidsrytme."],

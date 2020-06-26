@@ -14,5 +14,3 @@ newArray = newArray2.filter(function(filterTest){
     }
     return averageScore = total / answers.length;
 }
-
-

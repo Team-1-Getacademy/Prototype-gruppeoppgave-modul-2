@@ -1,14 +1,12 @@
 function loginView(){
     headerDiv.style.display='none'
     innholdDiv.innerHTML=
- `<div class="loginbox" id="formContainer">
-        <input type="email" placeholder="Email" id="email">
-        <input type="password" placeholder="Password" id="password">
+    `   <h2>Velkommen til VGO-Stasjonen</h2>
+        <div class="loginbox" id="formContainer">Username:
+        <input type="email" placeholder="Username" id="email">
+        Password: <input type="password" placeholder="Password" id="password">
 
-        <button onclick="signIn()" id="signIn"> Sign In </button>
-        
-        
-        
+        <button id="signIn" onclick="signIn();model.page='main';show();"> Sign In </button>
         </div>`
     }
 
