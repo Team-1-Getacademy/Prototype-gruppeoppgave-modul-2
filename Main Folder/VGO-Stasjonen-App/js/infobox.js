@@ -1,7 +1,17 @@
-
+let tipsArray = [];
 let tipsHtml;
 
 showInfoBox();
+
+function weekplanSorted(){
+    for (let j = 0; j < weekPlan.length; j++) {
+        for (let i = 0; i < weekPlan[j][0].answers.length; i++) {
+            k = weekPlan[j][0].answers[i];
+            tipsText = modelTest[modelTest.kategori[j]].weekPlan[i][k];
+            tipsArray.push(tipsText)
+       }
+    }
+}
 
 function showInfoBox(){
 

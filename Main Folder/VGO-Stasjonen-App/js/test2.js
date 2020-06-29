@@ -1,6 +1,7 @@
 
 function updateAnswers2() {
     const today = new Date();
+    let kategori = modelTest.kategori[i]
     modelTest.kosthold.userAnswers.push({date: today ,answers: []});
 }
 

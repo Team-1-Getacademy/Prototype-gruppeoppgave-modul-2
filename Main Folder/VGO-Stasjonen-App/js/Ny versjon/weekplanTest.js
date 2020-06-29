@@ -3,11 +3,20 @@
 let todaysDate = new Date();
 
 
+let weekPlan = [];
+// let planHtml;
+
+// weekplanSorted();
+// showWeekPlan();
+
+
+
 let weekPlan3 = [];
 let weekPlanDone = [];
 let planHtml;
 answerSorted()
 weekplanSorted();
+weekplanSorted1();
 showWeekPlan();
 
 
@@ -27,11 +36,12 @@ function dateFilter(i) {
     return newArray6;
 }
 
-function weekplanSorted(){
-    for (let j = 0; j < weekPlan.length; j++) {
-        for (let i = 0; i < weekPlan[j].length; i++) {
-            k = weekPlan3[j].answers[i];
-            weekPlanText = modelTest[modelTest.kategori[j]].weekPlan[k]
+function weekplanSorted1(){
+    for (let j = 0; j < weekPlan3.length; j++) {
+        for (let i = 0; i < weekPlan3[j][0].answers.length; i++) {
+            k = weekPlan3[j][0].answers[i];
+            weekPlanText = modelTest[modelTest.kategori[j]].weekPlan[i][k];
+            console.log(weekPlanText);
             weekPlanDone.push({weekPlanText,
                 isDone: false,
                 deadline: undefined,
@@ -43,7 +53,35 @@ function weekplanSorted(){
 
 
 
+// const weekPlan3 = [];
+// weekplanSorted1();
+// let kategorier;
+// function weekplanSorted1(){
+//     for (let i = 0; i < 2; i++) {
+//         dateFilter(i); 
+//         weekPlan3.push(newArray6);
+//     }
+// }
 
+// function dateFilter(i) {
+//     let kategorier = modelTest.kategori[i];
+//     newArray6 = modelTest[kategorier].userAnswers.sort((a, b) => b.date - a.date)
+//     newArray6.splice(1,Infinity)
+//     return newArray6;
+// }
+
+
+
+
+
+
+
+// function weekplanSorted(){
+//     for (let i = 1; i < 7; i++) {
+//         sortWeekplan(i); 
+//         weekPlan.push(weekplanFinal);
+//     }
+// }
 
 function showWeekPlan() {
      planHtml = `<table>
@@ -55,10 +93,8 @@ function showWeekPlan() {
                         <th>Sett frist</th>
                     </tr>`;
 
-    for (let j = 0; j < weekPlan.length; j++) {
-        for (let i = 0; i < weekPlan[j].length; i++) {
-            planHtml += createHtmlRow(j, i);
-       }
+    for (let i = 0; i < weekPlanDone.length; i++) {
+        planHtml += createHtmlRow(i);
     }
     planHtml += `</table>`;
     weekPlanHTML = planHtml;    
@@ -66,13 +102,13 @@ function showWeekPlan() {
 
 
 function createHtmlRow(j, i) {
-    const objectWeekplan = weekPlan[j][i];
+    const objectWeekplan = weekPlanDone[i];
     const checkedHtml = objectWeekplan.isDone ? 'checked="checked"' : '';
         return `<tr>    <td>${objectWeekplan.kategori}</td>
                         <td>${objectWeekplan.plan}</td>
-                        <td><input onchange="changeIsDone(this, ${j} , ${i})" type="checkbox" ${checkedHtml} /></td>
+                        <td><input onchange="changeIsDone(this , ${i})" type="checkbox" ${checkedHtml} /></td>
                         <td>${objectWeekplan.dateDone}</td>
-                        <td><input type="date" onchange="changeDate(this, ${j} , ${i})" value="${objectWeekplan.deadline || ''}"/><td>
+                        <td><input type="date" onchange="changeDate(this, ${i})" value="${objectWeekplan.deadline || ''}"/><td>
                         </td>
                     </tr>
                     `;
@@ -81,16 +117,16 @@ function createHtmlRow(j, i) {
 
 
 function changeIsDone(checkbox, j,index) {
-    weekPlan[j][index].isDone = checkbox.checked;
-    if (weekPlan[j][index].isDone)  {
-            weekPlan[j][index].dateDone = todaysDate.toLocaleDateString();
+    weekPlanDone[index].isDone = checkbox.checked;
+    if (weekPlanDone[index].isDone)  {
+            weekPlanDone[index].dateDone = todaysDate.toLocaleDateString();
     }
-    else {weekPlan[j][index].dateDone = 'Ikke gjort'}
+    else {weekPlanDone[index].dateDone = 'Ikke gjort'}
     showWeekPlan();
     show();
 }
 function changeDate(newDate, j,index){
-    weekPlan[j][index].deadline = newDate.value;
+    weekPlanDone[index].deadline = newDate.value;
     showWeekPlan();
     show();
 }

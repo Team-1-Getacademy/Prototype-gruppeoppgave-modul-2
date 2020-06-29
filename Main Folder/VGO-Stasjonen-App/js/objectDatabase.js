@@ -100,10 +100,10 @@ const modelTest ={
 
     ],
     weekPlan:[
-        ["weekPlan1","weekPlan2","weekPlan3","weekPlan4",],
-        ["weekPlan1","weekPlan2","weekPlan3","weekPlan4",],
-        ["weekPlan1","weekPlan2","weekPlan3","weekPlan4",],
-        ["weekPlan1","weekPlan2","weekPlan3","weekPlan4",],
+        ["weekPlan1a","weekPlan2a","weekPlan3a","weekPlan4a",],
+        ["weekPlan1b","weekPlan2b","weekPlan3b","weekPlan4b",],
+        ["weekPlan1c","weekPlan2c","weekPlan3c","weekPlan4c",],
+        ["weekPlan1d","weekPlan2d","weekPlan3d","weekPlan4d",],
     ],
     tipsTricks:[
         ["tips1","tips2","tips3","tips4",],
