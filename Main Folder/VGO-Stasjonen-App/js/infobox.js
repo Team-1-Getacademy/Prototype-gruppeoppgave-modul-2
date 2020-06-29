@@ -1,13 +1,14 @@
 let tipsArray = [];
 let tipsHtml;
 
+tipsSorted();
 showInfoBox();
 
-function weekplanSorted(){
+function tipsSorted(){
     for (let j = 0; j < weekPlan.length; j++) {
         for (let i = 0; i < weekPlan[j][0].answers.length; i++) {
             k = weekPlan[j][0].answers[i];
-            tipsText = modelTest[modelTest.kategori[j]].weekPlan[i][k];
+            tipsText = modelTest[modelTest.kategori[j]].tipsTricks[i][k];
             tipsArray.push(tipsText)
        }
     }
@@ -17,23 +18,19 @@ function showInfoBox(){
 
     tipsHtml = `<table>
                     <tr>
-                        <th>Kategori</th>
-                        <th>Tips</th>
+                        <th>Tips & Triks</th>
                     </tr>`;
 
-    for (let j = 0; j < model.tipsTricks.length; j++) {
-        for (let i = 0; i < model.tipsTricks[j].tips.length; i++) {
-            tipsHtml += createTipsHtmlRow(j, i);
-    }
+        for (let i = 0; i < tipsArray.length; i++) {
+            tipsHtml += createTipsHtmlRow(i);
     }
     tipsHtml += `</table>`;
     allTipsHTML = tipsHtml;   
 }
 
-function createTipsHtmlRow(j,i){
-    const objectKategoriTips = model.tipsTricks[j].kategori;
-    const objectTips = model.tipsTricks[j].tips[i];
-    return `<tr>    <td>${objectKategoriTips}</td>
+function createTipsHtmlRow(i){
+    const objectTips = tipsArray[i];
+    return `<tr>  
             <td>${objectTips}</td> </tr>`;
 
 }

@@ -106,10 +106,10 @@ const modelTest ={
         ["weekPlan1d","weekPlan2d","weekPlan3d","weekPlan4d",],
     ],
     tipsTricks:[
-        ["tips1","tips2","tips3","tips4",],
-        ["tips1","tips2","tips3","tips4",],
-        ["tips1","tips2","tips3","tips4",],
-        ["tips1","tips2","tips3","tips4",],
+        ["tips1a","tips2a","tips3a","tips4a",],
+        ["tips1b","tips2b","tips3b","tips4b",],
+        ["tips1c","tips2c","tips3c","tips4c",],
+        ["tips1d","tips2d","tips3d","tips4d",],
     ],
 },
 søvn: {
