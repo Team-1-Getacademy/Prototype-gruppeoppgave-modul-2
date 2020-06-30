@@ -20,12 +20,13 @@ function answerSorted(){
 // Sorterer etter dato på testene
 function dateFilter(i) {
     let kategorier = modelTest.kategori[i];
-    newArray = modelTest[kategorier].userAnswers.sort((a, b) => b.date - a.date)
-    newArray.splice(1,Infinity)
+    newArrayNotDone = modelTest[kategorier].userAnswers.sort((a, b) => b.date - a.date)
+    newArray = newArrayNotDone.slice(0,1)
     return newArray;
 }
 
 // Bruker Svarene til å finne riktig weekplan for så å putte inn mer data
+
 function weekplanSorted(){
     for (let j = 0; j < weekPlan.length; j++) {
         for (let i = 0; i < weekPlan[j][0].answers.length; i++) {

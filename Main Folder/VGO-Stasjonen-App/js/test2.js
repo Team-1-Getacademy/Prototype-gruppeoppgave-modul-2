@@ -1,36 +1,43 @@
 
-function updateAnswers2() {
+function updateAnswers(i) {
     const today = new Date();
-    let kategori = modelTest.kategori[i]
-    modelTest.kosthold.userAnswers.push({date: today ,answers: []});
+    modelTest[modelTest.kategori[i]].userAnswers.push({date: today ,answers: []});
+    showPageUserTestView(i);
 }
 
-function showPageTest2View() {
-    let buttonTest ='';
-    let i = modelTest.kosthold.userAnswers.length; i--;
-    for (let j = 0; j < 4; j++){
-       buttonTest += createButton(j)
-    };
-    const currentQuestionIndex = modelTest.kosthold.userAnswers[i].answers.length;
-    const text = currentQuestionIndex >= modelTest.kosthold.testQuestion.length
+function showPageUserTestView(testNr) {
+    let i = modelTest[modelTest.kategori[testNr]].userAnswers.length; i--;
+   
+    const currentQuestionIndex = modelTest[modelTest.kategori[testNr]].userAnswers[i].answers.length;
+    const text = currentQuestionIndex >= modelTest[modelTest.kategori[testNr]].testQuestion.length
     ? 'du er ferdig <button>gå til side b</button>'
-    : ` ${modelTest.kosthold.testQuestion[currentQuestionIndex]} <br> ${buttonTest}`
+    : ` ${modelTest[modelTest.kategori[testNr]].testQuestion[currentQuestionIndex]} <br> ${createAnswer(testNr, currentQuestionIndex)}`
     innhold.innerHTML = `
     <div>
     ${text}
     </div>            
     `;
 }
-function createButton(j){
-    let answer = modelTest.kosthold.testAnswer[j]
-    return `<button onclick="registerAnswer(${j})">${answer}</button> <br>`
+
+function createAnswer(testNr, currentQuestionIndex){
+    let buttonTest ='';
+for (let j = 0; j < modelTest[modelTest.kategori[testNr]].testAnswer.length; j++){
+    buttonTest += createButton(testNr, currentQuestionIndex,j)
+    };
+return buttonTest;
 }
 
-function registerAnswer(answer) {
-    let i = modelTest.kosthold.userAnswers.length; i--;
+
+function createButton(testNr, currentQuestionIndex, j){
+    let answer = modelTest[modelTest.kategori[testNr]].testAnswer[currentQuestionIndex][j]
+    return `<button onclick="registerAnswer(${testNr},${j})">${answer}</button>`
+}
+
+function registerAnswer(testNr , answer) {
+    let i = modelTest[modelTest.kategori[testNr]].userAnswers.length; i--;
     
-    modelTest.kosthold.userAnswers[i].answers.push(answer);
-    showPageTest2View();
+    modelTest[modelTest.kategori[testNr]].userAnswers[i].answers.push(answer);
+    showPageUserTestView(testNr);
 }
 
 
