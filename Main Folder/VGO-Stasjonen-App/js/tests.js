@@ -1,3 +1,6 @@
+// For å legge til en ny test putter man inn:      <button class="test-btn" onclick="updateAnswers(0);model.page='userTest';show();">Test 1</button> <br>
+// For så å endre updateAnswer til den riktige kategorien i modelTest 
+
 function showPageTestView() {
     innhold.innerHTML = `   
     <div class="main-view-css">

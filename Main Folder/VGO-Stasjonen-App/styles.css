@@ -21,11 +21,9 @@ body{
     padding-bottom: 10px;
 }
 
-
 .grid-item-2 {
     background-color: gray;   
     grid-row: span 3;
-    
     
 }
 .grid-item-3 {
@@ -110,6 +108,7 @@ body{
     background: rgb(47, 46, 117);
     color: #fff;
     border-radius: 10px;
+    
   }
 
   .test-btn:hover {

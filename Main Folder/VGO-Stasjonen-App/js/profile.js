@@ -1,13 +1,4 @@
 function showPageProfilView() {
-    innhold.innerHTML = `   
-    <div class="main-view-css">
-    <div id="omOssDiv" class="grid-item-omOss-tests-profile-chat"> Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil Profil
-    </div>
-    </div>`;
-}
-
-// test 
-function showPageProfilView() {
     innhold.innerHTML = `
     <div class="user-card">
     <div class="container-profile">
@@ -21,7 +12,7 @@ function showPageProfilView() {
         <div class="stats">
           <span class="followers">
             <span class="experiance-value">1424</span>
-            <span class="profile-experiance"><b>Experiance to next level</b></span>
+            <span class="profile-experiance"><b>Experience to next level</b></span>
           </span>
           
         </div>

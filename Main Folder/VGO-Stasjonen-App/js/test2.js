@@ -42,12 +42,3 @@ function registerAnswer(testNr , answer) {
 
 
 
-
-
-
-
-
-// function scoreboardPoints(value){
-//    let scoreInnhold = document.getElementById("innhold").innerHTML;
-//     return `${value}`
-// }
