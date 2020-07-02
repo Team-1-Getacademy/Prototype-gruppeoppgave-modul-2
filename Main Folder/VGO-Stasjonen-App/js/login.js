@@ -29,5 +29,5 @@
             headerDiv.style.display='block';
             showMainPageHeader();
             showMainPageContentView();
-            
+            showMainPageFooter();
         }

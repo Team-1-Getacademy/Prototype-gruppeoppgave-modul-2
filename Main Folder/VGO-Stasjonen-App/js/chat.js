@@ -66,7 +66,7 @@ function showPageChatView() {
 				</div>
 				<div class="triangle"></div>
 				<div class="message">
-                        Hei, se at du ha prøvde å kontakte oss, er det noe vi kan hjelpe med ?
+                        Hei, ser at du har prøvd å kontakte oss, er det noe vi kan hjelpe deg med?
 				</div>
 			</li>
 			<li class="me">
@@ -77,7 +77,7 @@ function showPageChatView() {
 				</div>
 				<div class="triangle"></div>
 				<div class="message">
-					Ja takk, lurte på om dere kunne hjelpe søke meg inn på en fagskole? tenkte å starte med noe faglig påbygging! :)
+					Så fint, jeg lurte på om dere kunne hjelpe søke meg inn på en fagskole? tenkte å starte med noe faglig påbygging! :)
 				</div>
             </li>
             <li class="you">
@@ -88,7 +88,7 @@ function showPageChatView() {
 				</div>
 				<div class="triangle"></div>
 				<div class="message">
-                    Ja det kan vi fint gjøre ! Er det greit om vi ta en prat på telefon på et eller annet tidspunkt ?
+                    Ja det kan vi hjelpe deg med, er det greit om vi tar en prat på telefon på et eller annet tidspunkt ?
 				</div>
 			</li>
 			<li class="me">
@@ -99,7 +99,7 @@ function showPageChatView() {
 				</div>
 				<div class="triangle"></div>
 				<div class="message">
-					Ja det passe idag ! :) tusen takk! 
+					Ja det passer idag ! :) tusen takk! 
 				</div>
 			</li>
 		</ul>

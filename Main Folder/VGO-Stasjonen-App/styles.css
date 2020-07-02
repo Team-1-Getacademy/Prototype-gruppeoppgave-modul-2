@@ -418,3 +418,24 @@ body{
     margin-top:5px;
     display:inline-block;
   }
+
+  /*Footer Styles*/
+
+  .footer_style {
+    display: flex;
+    background-color: orange;  
+    height: 130px;
+  }
+
+  .footer_left_colomn {
+    flex: 1;
+    margin-left: 15%;
+ }
+
+  .footer_middle_colomn {
+    flex:1;
+  }
+
+  .footer_right_colomn {
+    flex: 1;
+  }
