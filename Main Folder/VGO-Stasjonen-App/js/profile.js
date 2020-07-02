@@ -21,3 +21,4 @@ function showPageProfilView() {
     </div>
   </div>`;
 }
+

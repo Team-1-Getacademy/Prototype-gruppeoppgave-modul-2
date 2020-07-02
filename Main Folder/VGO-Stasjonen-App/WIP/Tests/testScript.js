@@ -39,6 +39,7 @@ contentDiv.innerHTML = `${questionHtml}`
 
 }
 
+
 function showBtns() {
 
 let btnsShow = 
